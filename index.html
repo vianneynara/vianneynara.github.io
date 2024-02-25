@@ -174,7 +174,7 @@
                 event.preventDefault();
                 const href = this.getAttribute('href');
 
-                if (href.startsWith('#')) {
+                if (href === ('#')) {
                     window.scrollTo({top: 0, behavior: 'smooth'});
                 } else if (href.startsWith('#')) {
                     const target = document.querySelector(href);
