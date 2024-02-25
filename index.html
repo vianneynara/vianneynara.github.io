@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nara's Profile</title>
+    <link rel="icon" href="img/icon.ico" sizes="any">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="page-wrapper">
+    <header class="page-header-wrapper">
+        <div class="page-header">
+            <nav class="navbar" >
+                <a href="#profile">profile</a>
+                <a href="#projects">projects</a>
+                <a href="#contact">contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <hr>
+        <section id="profile">
+            <h1 class="headingIcon"><a href="#profile">Profile</a></h1>
+            <div class="profile-content-wrapper">
+                <div style="margin: 10px;">
+                    <p>
+                        Nara is currently in Jogjakarta 🇮🇩, studying Informatics. Nara came from Jakarta. Nara has
+                        passion in web <i><u>development</u></i>, <i><u>networking</u></i>, and <i><u>machine learning</u></i>.
+                        Nara is currently relearning web development and still progressing in mastering Java.
+
+                        <br><br>
+                        Yurr, I love Emilia.
+                    </p>
+                </div>
+                <div style="margin: 10px;">
+                    <img src="img/profilePicture.jpg" alt="Nara's photo" width="240px" height="auto"
+                         style="border-radius: 5px 5px 5px 5px;">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <section id="projects">
+            <h1 class="headingIcon"><a href="#projects">Projects</a></h1>
+            <p>
+                During my days of learning Python, I freelanced for
+                <a href="https://kyou.id/" target="_blank"><u>Kyou Hobby Shop</u></a> making a simple Discord
+                bot built using disnake library. The bot is used to moderate the server, provide fun commands, and also
+                handle payments to their main server.
+                <br><br>
+                I also have other non-commercial projects for learning and fun purposes. These are the ones on top of my
+                <a href="https://github.com/vianneynara" target="_blank">GitHub</a>.
+            </p>
+            <table style="width: 100%; margin-bottom: 20px">
+                <!-- Headers -->
+                <tr>
+                    <th style="font-family: 'JetBrains Mono ExtraBold', monospace; text-align: center; width: 25px">Nr</th>
+                    <th style="font-family: 'JetBrains Mono ExtraBold', monospace; text-align: center">Project</th>
+                </tr>
+                <!-- Contents -->
+                <tr>
+                    <th>1</th>
+                    <td class="project-cell">
+                        <a href="https://github.com/vianneynara/Konsmail" target="_blank">
+                            <u>Konsmail</u>, a local emailing app built for PBOL project.
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td class="project-cell">
+                        <a href="https://github.com/vianneynara/KurirOptimizer" target="_blank">
+                            <u>Kurir Optimizer</u>, a GUI app to find the shortest path for courier delivery throughout Jawa Tengah.
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td class="project-cell">
+                        <a href="https://github.com/vianneynara/CircleUtilityBot" target="_blank">
+                            <u>Circle Utility Bot</u>, Discord bot to manage members and sending embeds.
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                My next project is an E-commerce website for a specific market, in collaboration with mates.
+                Even though it is for software development class, I'm optimistic that we should be able to deliver it as
+                even a start-up. We are still architecting the system and business model for the product.
+            </p>
+        </section>
+
+        <hr>
+        <section id="contact">
+            <h1 class="headingIcon"><a href="#contact">Contact</a></h1>
+            <p style="text-align: center">
+                You can contact me directly via my socials
+            </p>
+            <div class="contact-content-wrapper">
+                <div class="contact-content">
+                    <a href="https://www.linkedin.com/in/vianneynara/" target="_blank">
+                        <img src="img/linkedin.png" alt="LinkedIn" width="30px" height="auto">
+                    </a>
+                </div>
+                <div class="contact-content">
+                    <a href="https://www.instagram.com/vianneynara/" target="_blank">
+                        <img src="img/instagram.png" alt="Instagram" width="30px" height="auto">
+                    </a>
+                </div>
+                <div class="contact-content">
+                    <a href="https://github.com/vianneynara/" target="_blank">
+                        <img src="img/github.png" alt="GitHub" width="30px" height="auto">
+                    </a>
+                </div>
+                <div class="contact-content">
+                    <a id="copyDiscordUsername">
+                        <img src="img/discord.png" alt="Discord" width="30px" height="auto">
+                    </a>
+                </div>
+            </div>
+            <fieldset>
+                <legend style="text-align: center">
+                    ...or, by sending an email to <a href="mailto:nara@kons.dev">nara@kons.dev</a>
+                </legend>
+                <form id="contactForm" method="POST">
+                    <input type="text" id="name" name="name" placeholder="Name" minlength="3" required>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <br>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" minlength="3" required>
+                    <br>
+                    <textarea id="content" name="content" rows="10" placeholder="Content" maxlength="1000" required></textarea>
+                    <br>
+                    <input type="submit" value="Send" style="width: 100px">
+                </form>
+            </fieldset>
+            <br>
+        </section>
+        <hr>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <a href="#">🔼</a>
+        <div style="text-align: center; padding-bottom: 10px;">
+            end of page
+        </div>
+    </footer>
+</div>
+</body>
+
+<script>
+    /* This mocks up the email sent, karena belum di buat, lom ngerti. */
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Email Sent!');
+        this.reset();
+    });
+
+    /* This copies my Discord username to the clipboard */
+    document.getElementById('copyDiscordUsername').addEventListener('click', function(event) {
+        event.preventDefault();
+        navigator.clipboard.writeText('vianneynara')
+            .then(() => alert('Discord username copied to clipboard!'))
+            .catch(err => console.error('Could not copy text: ', err));
+    });
+</script>
+</html>
