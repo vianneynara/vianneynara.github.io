@@ -12,6 +12,7 @@
 
 * {
     font-family: "JetBrains Mono Medium", monospace;
+    /*font-size: 2vw;*/
 }
 
 html {
@@ -238,4 +239,20 @@ footer a {
     background: var(--secondary-bg-color);
     border-radius: 3px;
     margin: 5px 5px 5px 5px
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .contact-content img {
+        width: 50px;
+        height: auto;
+    }
+
+    .profile-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
