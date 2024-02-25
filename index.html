@@ -165,5 +165,25 @@
             .then(() => alert('Discord username copied to clipboard!'))
             .catch(err => console.error('Could not copy text: ', err));
     });
+
+    /* Hiding anchor tags being appended on the URL */
+    window.addEventListener("DOMContentLoaded", (e) => {
+        const anchors = document.querySelectorAll('a');
+        anchors.forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const href = this.getAttribute('href');
+
+                if (href.startsWith('#')) {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                } else if (href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    window.location.href = href;
+                }
+            });
+        })
+    });
 </script>
 </html>
