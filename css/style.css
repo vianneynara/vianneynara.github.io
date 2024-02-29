@@ -29,16 +29,13 @@ html {
 }
 
 body {
-    margin: 0;
-    transition: background-image 0.1s ease-in-out;
-}
-
-div.main-bg {
     background-image: url(../img/bgImage_halfScreen.jpeg);
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(3px);
     padding: 7px 0 7px 0;
+    margin: 0;
+    transition: background-image 0.1s ease-in-out;
 }
 
 .page-wrapper {
