@@ -6,6 +6,7 @@
     --secondary-text-color: #1b1b1c;
     --primary-yellow-color: #ffdb33;
     --secondary-yellow-color: #ffe676;
+    --primary-purple-color: #8e3ee1;
 
     /* RGB colors*/
     --rgb-primary-bg-color: 32, 33, 35;
@@ -15,11 +16,12 @@
     --rgb-secondary-text-color: 27, 27, 28;
     --rgb-primary-yellow-color: 255, 219, 51;
     --rgb-secondary-yellow-color: 255, 230, 118;
+    --rgb-primary-purple-color: 142, 62, 225;
 }
 
 * {
     font-family: "JetBrains Mono Medium", monospace;
-    /*font-size: 2vw;*/
+    /* Transisi global */
 }
 
 html {
@@ -27,11 +29,13 @@ html {
 }
 
 body {
-    background-image: url(../img/bgImage.jpeg);
+    background-image: url(../img/bgImage_halfScreen.jpeg);
     background-attachment: fixed;
+    background-size: cover;
     backdrop-filter: blur(3px);
     margin: 0;
     padding: 7px 0 7px 0;
+    transition: background-image 0.1s ease-in-out;
 }
 
 .page-wrapper {
@@ -189,34 +193,28 @@ tr th {
     opacity: 0;
 }
 
+.contact-content-wrapper>.contact-content {
+    mask-size: 100%;
+}
+
 .linkedin {
     -webkit-mask-image: url(../img/linkedin.png);
     mask-image: url(../img/linkedin.png);
-
-    /*-webkit-mask-position: top;*/
-    mask-position: top;
 }
 
 .instagram {
     -webkit-mask-image: url(../img/instagram.png);
     mask-image: url(../img/instagram.png);
-
-    mask-size: 100%;
 }
 
 .github {
     -webkit-mask-image: url(../img/github.png);
     mask-image: url(../img/github.png);
-
-    mask-size: 100%;
 }
 
 .discord {
     -webkit-mask-image: url(../img/discord.png);
     mask-image: url(../img/discord.png);
-
-    mask-size: 100%;
-
 }
 
 /* Contact on Form*/
@@ -306,5 +304,16 @@ footer a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+/* When the desktop screen is wider than body's background image, change background image */
+@media screen and (min-width: 1920px) {
+    body {
+        background-image: url(../img/bgImage_large.jpg);
+    }
+
+    .page-wrapper {
+        box-shadow: -3px 3px 10px 0 rgba(var(--rgb-primary-purple-color), 0.3);
     }
 }
