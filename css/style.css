@@ -29,19 +29,22 @@ html {
 }
 
 body {
+    margin: 0;
+    transition: background-image 0.1s ease-in-out;
+}
+
+div.main-bg {
     background-image: url(../img/bgImage_halfScreen.jpeg);
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(3px);
-    margin: 0;
     padding: 7px 0 7px 0;
-    transition: background-image 0.1s ease-in-out;
 }
 
 .page-wrapper {
     max-width: 720px;
     min-width: 360px;
-    height: 100%;
+    /*height: 100%;*/
     margin-left: auto;
     margin-right: auto;
     border-left: 3px solid #2a2b2d;
@@ -254,17 +257,12 @@ textarea:focus {
     border: 1px solid var(--primary-yellow-color);
 }
 
-footer a {
-    font-size: xx-large;
+/* Back to top button element */
+a[href="#"] {
     position: fixed;
-    color: var(--primary-text-color);
     text-decoration: none;
-    right: 20px;
-    bottom: 20px;
-    text-align: center;
-    background-color: #626465;
-    border-radius: 5px 5px 5px 5px;
-    padding: 3px 3px;
+    right: 15px;
+    bottom: 3px;
 }
 
 /* Page scroll bar */
@@ -309,7 +307,7 @@ footer a {
 
 /* When the desktop screen is wider than body's background image, change background image */
 @media screen and (min-width: 1920px) {
-    body {
+    div.background-image {
         background-image: url(../img/bgImage_large.jpg);
     }
 
