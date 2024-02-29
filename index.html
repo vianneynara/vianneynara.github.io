@@ -6,13 +6,17 @@
     <link rel="icon" href="img/icon.ico" sizes="any">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import '@fontsource/jetbrains-mono/400.css';
+    </style>
 </head>
 
 <body>
 <div class="page-wrapper">
     <header class="page-header-wrapper">
         <div class="page-header">
-            <nav class="navbar" >
+            <nav class="navbar">
                 <a href="#profile">profile</a>
                 <a href="#projects">projects</a>
                 <a href="#contact">contact</a>
@@ -27,7 +31,8 @@
                 <div style="margin: 10px;">
                     <p>
                         Nara is currently in Jogjakarta 🇮🇩, studying Informatics. Nara came from Jakarta. Nara has
-                        passion in <i><u>web development</u></i>, <i><u>networking</u></i>, and <i><u>machine learning</u></i>.
+                        passion in <i><u>web development</u></i>, <i><u>networking</u></i>, and <i><u>machine
+                        learning</u></i>.
                         Nara is currently relearning web development and still progressing in mastering Java.
 
                         <br><br>
@@ -56,7 +61,8 @@
             <table style="width: 100%; margin-bottom: 20px">
                 <!-- Headers -->
                 <tr>
-                    <th style="font-family: 'JetBrains Mono ExtraBold', monospace; text-align: center; width: 25px">Nr</th>
+                    <th style="font-family: 'JetBrains Mono ExtraBold', monospace; text-align: center; width: 25px">Nr
+                    </th>
                     <th style="font-family: 'JetBrains Mono ExtraBold', monospace; text-align: center">Project</th>
                 </tr>
                 <!-- Contents -->
@@ -72,7 +78,8 @@
                     <th>2</th>
                     <td class="project-cell">
                         <a href="https://github.com/vianneynara/KurirOptimizer" target="_blank">
-                            <u>Kurir Optimizer</u>, a GUI app to find the shortest path for courier delivery throughout Jawa Tengah.
+                            <u>Kurir Optimizer</u>, a GUI app to find the shortest path for courier delivery throughout
+                            Jawa Tengah.
                         </a>
                     </td>
                 </tr>
@@ -99,43 +106,44 @@
                 You can contact me directly via my socials
             </p>
             <div class="contact-content-wrapper">
-                <div class="contact-content">
+                <div class="contact-content linkedin">
                     <a href="https://www.linkedin.com/in/vianneynara/" target="_blank">
                         <img src="img/linkedin.png" alt="LinkedIn" width="30px" height="auto">
                     </a>
                 </div>
-                <div class="contact-content">
+                <div class="contact-content instagram">
                     <a href="https://www.instagram.com/vianneynara/" target="_blank">
                         <img src="img/instagram.png" alt="Instagram" width="30px" height="auto">
                     </a>
                 </div>
-                <div class="contact-content">
+                <div class="contact-content github">
                     <a href="https://github.com/vianneynara/" target="_blank">
                         <img src="img/github.png" alt="GitHub" width="30px" height="auto">
                     </a>
                 </div>
-                <div class="contact-content">
+                <div class="contact-content discord">
                     <a id="copyDiscordUsername">
                         <img src="img/discord.png" alt="Discord" width="30px" height="auto">
                     </a>
                 </div>
             </div>
-            <fieldset>
-                <legend style="text-align: center">
-                    ...or, by sending an email to <a href="mailto:nara@kons.dev">nara@kons.dev</a>
-                </legend>
-                <form id="contactForm" method="POST">
+            <form id="contactForm" method="POST">
+                <fieldset>
+                    <legend style="text-align: center">
+                        ...or, by sending an email to <a href="mailto:nara@kons.dev">nara@kons.dev</a>
+                    </legend>
                     <input type="text" id="name" name="name" placeholder="Name" minlength="3" required>
                     <br>
                     <input type="email" id="email" name="email" placeholder="Email Address" required>
                     <br>
                     <input type="text" id="subject" name="subject" placeholder="Subject" minlength="3" required>
                     <br>
-                    <textarea id="content" name="content" rows="10" placeholder="Content" maxlength="1000" required></textarea>
+                    <textarea id="content" name="content" rows="10" placeholder="Content" maxlength="1000"
+                              required></textarea>
                     <br>
                     <input type="submit" value="Send" style="width: 100px">
-                </form>
-            </fieldset>
+                </fieldset>
+            </form>
             <br>
         </section>
         <hr>
@@ -153,38 +161,18 @@
 
 <script>
     /* This mocks up the email sent, karena belum di buat, lom ngerti. */
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault();
         alert('Email Sent!');
         this.reset();
     });
 
     /* This copies my Discord username to the clipboard */
-    document.getElementById('copyDiscordUsername').addEventListener('click', function(event) {
+    document.getElementById('copyDiscordUsername').addEventListener('click', function (event) {
         event.preventDefault();
         navigator.clipboard.writeText('vianneynara')
             .then(() => alert('Discord username copied to clipboard!'))
             .catch(err => console.error('Could not copy text: ', err));
-    });
-
-    /* Hiding anchor tags being appended on the URL */
-    window.addEventListener("DOMContentLoaded", (e) => {
-        const anchors = document.querySelectorAll('a');
-        anchors.forEach(anchor => {
-            anchor.addEventListener('click', function(event) {
-                event.preventDefault();
-                const href = this.getAttribute('href');
-
-                if (href === '#') {
-                    window.scrollTo({top: 0, behavior: 'smooth'});
-                } else if (href.startsWith('#')) {
-                    const target = document.querySelector(href);
-                    target.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    window.location.href = href;
-                }
-            });
-        })
     });
 </script>
 </html>
