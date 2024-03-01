@@ -320,6 +320,10 @@ a[href="#"] {
 }
 
 @media screen and (min-width: 769px) {
+    .main-bg-overlay {
+        padding: 7px 0 7px 0;
+    }
+
     .page-wrapper {
         border-radius: 15px 15px 15px 15px;
     }
@@ -329,10 +333,6 @@ a[href="#"] {
 @media screen and (min-width: 1920px) {
     .main-bg {
         background-image: url(../img/bgImage_horizontal.jpg);
-    }
-
-    .main-bg-overlay {
-        padding: 7px 0 7px 0;
     }
 
     .page-wrapper {
