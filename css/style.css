@@ -1,4 +1,5 @@
 :root {
+    /* Hex colors */
     --primary-bg-color: #202123;
     --secondary-bg-color: #2a2b2d;
     --whitish-bg-color: #f5f5f5;
@@ -32,20 +33,20 @@ body {
     transition: background-image 0.1s ease-in-out;
 }
 
+/*  */
 .main-bg {
     z-index: -1;
     background-image: url(../img/bgImage_vertical.jpeg);
     background-attachment: fixed;
     background-size: cover;
-    transition: background-image 0.1s ease-in-out;
 }
 
+/* Gives the blur effect for index -1 physically */
 .main-bg-overlay {
     width: 100%;
     height: 100%;
     z-index: -1;
     backdrop-filter: blur(3px);
-    transition: backdrop-filter 0.1s ease-in-out;
 }
 
 .page-wrapper {
@@ -85,7 +86,7 @@ body {
 .page-header-wrapper .page-header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centering the whole content inside */
+    justify-content: center;
     max-width: 720px;
     width: 100%;
 }
@@ -301,7 +302,7 @@ a[href="#"] {
     margin: 0 5px 0 5px
 }
 
-/* This helps the web components to be responsive, adjusting the scales in mobile */
+/* This helps the web components to be responsive, adjusting the scales in mobile (screen max of 768px) */
 @media screen and (max-width: 768px) {
     body {
         font-size: 16px;
@@ -319,6 +320,7 @@ a[href="#"] {
     }
 }
 
+/* Desktop, but at least this starts the effects from 769px width */
 @media screen and (min-width: 769px) {
     .main-bg-overlay {
         padding: 7px 0 7px 0;
