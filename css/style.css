@@ -32,7 +32,7 @@ body {
     background-image: url(../img/bgImage_vertical.jpeg);
     background-attachment: fixed;
     background-size: cover;
-    backdrop-filter: blur(3px);
+    /*backdrop-filter: blur(3px);*/
     margin: 0;
     transition: background-image 0.1s ease-in-out;
 }
@@ -232,6 +232,13 @@ input:focus {
     background-color: var(--whitish-bg-color);
     color: var(--secondary-text-color);
     border: 1px solid var(--primary-yellow-color);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-yellow-color);
+    color: var(--secondary-text-color);
+    border: 1px solid var(--primary-yellow-color);
+    transition: all 0.2s ease-in-out;
 }
 
 textarea {
