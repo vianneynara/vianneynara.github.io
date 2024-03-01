@@ -304,7 +304,7 @@ a[href="#"] {
 
 /* When the desktop screen is wider than body's background image, change background image */
 @media screen and (min-width: 1920px) {
-    div.background-image {
+    body {
         background-image: url(../img/bgImage_large.jpg);
     }
 
