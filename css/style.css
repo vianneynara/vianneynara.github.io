@@ -29,11 +29,10 @@ html {
 }
 
 body {
-    background-image: url(../img/bgImage_halfScreen.jpeg);
+    background-image: url(../img/bgImage_vertical.jpeg);
     background-attachment: fixed;
     background-size: cover;
     backdrop-filter: blur(3px);
-    padding: 7px 0 7px 0;
     margin: 0;
     transition: background-image 0.1s ease-in-out;
 }
@@ -46,7 +45,6 @@ body {
     margin-right: auto;
     border-left: 3px solid #2a2b2d;
     border-right: 3px solid #2a2b2d;
-    border-radius: 15px 15px 15px 15px;
     justify-content: center;
     padding: 0 10px 0 10px;
     /* background color and text color for this group */
@@ -302,10 +300,20 @@ a[href="#"] {
     }
 }
 
+@media screen and (min-width: 769px) {
+    body {
+        padding: 7px 0 7px 0;
+    }
+
+    .page-wrapper {
+        border-radius: 15px 15px 15px 15px;
+    }
+}
+
 /* When the desktop screen is wider than body's background image, change background image */
 @media screen and (min-width: 1920px) {
     body {
-        background-image: url(../img/bgImage_large.jpg);
+        background-image: url(../img/bgImage_horizontal.jpg);
     }
 
     .page-wrapper {
