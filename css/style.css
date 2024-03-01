@@ -142,6 +142,10 @@ a:hover {
     justify-content: space-between;
 }
 
+.profile-content-wrapper p {
+    margin-top: -10px;
+}
+
 .headingIcon::before {
     content: '# ';
 }
