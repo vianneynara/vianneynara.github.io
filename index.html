@@ -17,13 +17,11 @@
     <div class="main-bg-overlay">
         <div class="page-wrapper">
             <header class="page-header-wrapper">
-                <div class="page-header">
-                    <nav class="navbar">
-                        <a href="#profile">profile</a>
-                        <a href="#projects">projects</a>
-                        <a href="#contact">contact</a>
-                    </nav>
-                </div>
+                <nav class="navbar">
+                    <a href="#profile">profile</a>
+                    <a href="#projects">projects</a>
+                    <a href="#contact">contact</a>
+                </nav>
             </header>
             <main>
                 <hr>
@@ -145,9 +143,9 @@
                             <legend style="text-align: center">
                                 ...or, by sending an email to <a href="mailto:nara@kons.dev">nara@kons.dev</a>
                             </legend>
-                            <input type="text" id="name" name="name" placeholder="Name" minlength="3" required>
+                            <input type="text" id="name" name="name" placeholder="Name" minlength="3" autocomplete="given-name" required>
                             <br>
-                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                            <input type="email" id="email" name="email" placeholder="Email Address" autocomplete="email" required>
                             <br>
                             <input type="text" id="subject" name="subject" placeholder="Subject" minlength="3" required>
                             <br>
@@ -174,7 +172,7 @@
 
     <!-- Back to top button -->
     <a href="#">
-        <img src="img/arrow-up.png" alt="Back to top" width="100px" height="auto">
+        <img src="img/arrow-up.png" alt="Back to top" width="80px" height="auto">
     </a>
 </div>
 </body>
